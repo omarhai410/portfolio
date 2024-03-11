@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Votre Titre</title><style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,3,66,1) 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajustement de la hauteur à 100vh */
+  width: 100vw; /* Ajustement de la largeur à 100vw */
+  margin: 0; /* Suppression de la marge */
+  zoom: 90%; /* Fixer le zoom à 90% pour tous les appareils */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh; /* Ajustement de la marge supérieure en utilisant vh */
+  transform-style: preserve-3d;
+  border: 1rem solid white;
+  padding: 1rem;
+  transform: rotateX(180deg) rotateY(180deg);
+}
+
+
+
+  .container span {
+    position: absolute;
+    display: block;
+    animation: roll_over 1s infinite;
+    transition: 1100ms;
+    transform: perspective(25rem) rotateX(60deg);
+    margin: 2rem;
+  }
+
+  @keyframes roll_over{ 
+    0%{ transform: translateX(0rem);
+    transform: rotateX(0deg);
+    filter: blur(0.05rem);
+    opacity: 0%;}
+
+    50%{ opacity: 100%;}
+
+   100%{ transform: translateX(25rem);
+    transform: rotateX(180deg);
+    opacity:0%;
+    filter: blur(0.25rem);}
+}
+
+
+#item_01 {
+    height: 30rem;
+    width: 30rem;
+    border: 0.25rem initial;
+    border-radius: 50%;
+    background: rgba(202, 1, 192, 0.2);
+}
+
+#item_02 {
+    height: 28rem;
+    width: 28rem;
+    border: 0.20rem initial;
+    border-radius: 50%;
+    background: rgba(155, 1, 202, 0.2);
+    animation-delay: 900ms;
+}
+
+#item_03 {
+    height: 26rem;
+    width: 26rem;
+    border: 0.15rem initial;
+    border-radius: 50%;
+    background: rgba(122, 1, 202, 0.2);
+    animation-delay: 800ms;
+}
+
+#item_04 {
+    height: 24rem;
+    width: 24rem;
+    border: 0.10rem initial;
+    border-radius: 50%;
+    background: rgba(88, 1, 202, 0.2);
+    animation-delay: 700ms;
+}
+
+#item_05 {
+    height: 22rem;
+    width: 22rem;
+    border: 0.08rem initial;
+    border-radius: 50%;
+    background: rgba(95, 1, 202, 0.2);
+    animation-delay: 600ms;
+}
+
+#item_06 {
+    height: 20rem;
+    width: 20rem;
+    border: 0.06rem initial;
+    border-radius: 50%;
+    background: rgba(55, 1, 202, 0.2);
+    animation-delay: 500ms;
+}
+
+#item_07 {
+    height: 18rem;
+    width: 18rem;
+    border: 0.04rem initial;
+    border-radius: 50%;
+    background: rgba(28, 0, 185, 0.2);
+    animation-delay: 400ms;
+}
+
+#item_08 {
+    height: 16rem;
+    width: 16rem;
+    border: 0.02rem initial;
+    border-radius: 50%;
+    background-color: rgba(28, 0, 185, 0.25);
+    animation-delay: 300ms;
+}
+
+#item_09 {
+    height: 14rem;
+    width: 14rem;
+    border: 0.008rem initial;
+    border-radius: 50%;
+    background-color: rgba(26, 0, 170, 0.3);
+    animation-delay: 200ms;
+}
+
+#item_10 {
+    height: 12rem;
+    width: 12rem;
+    border: 0.01rem initial;
+    border-radius: 50%;
+    background-color: rgba(23, 0, 155, 0.4);
+    animation-delay: 100ms;
+}
+
+#item_11 {
+    height: 10rem;
+    width: 10rem;
+    border: 0.006rem initial;
+    border-radius: 50%;
+    background-color: rgba(21, 0, 141, 0.45);
+    animation-delay: 80ms;
+}
+
+#item_12 {
+    height: 8rem;
+    width: 8rem;
+    border: 0.004rem initial;
+    border-radius: 50%;
+    background-color: rgba(19, 0, 124, 0.5);
+    animation-delay: 40ms;
+}
+.white-circle {
+  position: absolute;
+  background-color: white;
+  width: 10px; /* Définissez la largeur que vous souhaitez pour les cercles */
+  height: 10px; /* Définissez la hauteur que vous souhaitez pour les cercles */
+  border-radius: 50%;
+}
+
+
+  .colorful-trail {
+    position: absolute;
+    background: linear-gradient(45deg, violet, pink, blue);
+    width: 10px;
+    height: 4px;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+ .welcome-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    white-space: nowrap;
+    color: white;
+    opacity: 0;
+    padding: 10px;
+    animation: fade 2s ease-in-out 1s alternate infinite;
+    background: linear-gradient(45deg, blue, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 600px;
+    text-align: center;
+ z-index: 999;}
+
+.welcome-text:hover {
+    background: linear-gradient(45deg, red, blue);
+    border-color: white;
+    text-shadow: 0 0 5px white;
+    z-index: 2; /* Augmentation du z-index pour mettre le texte en avance */
+}
+img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: right bottom;
+  animation: rotateDown 10s linear infinite;
+}
+
+@keyframes rotateDown {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-130deg);
+  }
+}
+
+.left-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left bottom;
+  animation: rotateLeft 10s linear infinite;
+}
+
+@keyframes rotateLeft {
+  0% {
+    transform: rotate(130deg); /* Même angle de départ que l'image de droite */
+  }
+  100% {
+    transform: rotate(0deg); /* Même angle que l'image de droite */
+  }
+}
+
+
+   #waiting-container {
+    position: fixed; /* Position fixe pour rester en bas de la page */
+    bottom: 0; /* En bas de la page */
+    width: 100%; /* Largeur totale de la page */
+    padding: 10px; /* Ajouter un peu de marge intérieure */
+    
+  }
+
+  /* Style pour le texte "Veuillez patienter quelques instants" */
+  #waiting-text {
+    color: white; /* Couleur du texte en blanc */
+    text-align: center; /* Centrer le texte horizontalement */
+    animation: moveText 20s linear infinite; /* Animation pour faire bouger le texte */
+  }
+
+  @keyframes moveText {
+    0% {
+      transform: translateX(-100%); /* Position de départ (hors de la bordure à gauche) */
+    }
+    100% {
+      transform: translateX(100%); /* Position finale (hors de la bordure à droite) */
+    }
+  }
+</style>
+</head>
+<body>
+<div class="welcome-text"></div>
+  <img class="left-img" src="fada2.png" alt="Description of the left image">
+  
+
+<div class="container">
+  <span id="item_01"></span>
+  <span id="item_02"></span>
+  <span id="item_03"></span>
+  <span id="item_04"></span>
+  <span id="item_05"></span>
+  <span id="item_06"></span>
+  <span id="item_07"></span>
+  <span id="item_08"></span>
+  <span id="item_09"></span>
+  <span id="item_10"></span>
+  <span id="item_11"></span>
+  <span id="item_12"></span>
+  
+
+</div>
+  <img src="fada2.png" alt="Description de l'image">
+  
+
+<div id="waiting-container">
+  <p id="waiting-text">Veuillez patienter quelques instants...</p>
+</div>
+
+
+<script>
+  function getRandom(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function createWhiteDots() {
+  const numberOfDots = 100;
+
+  for (let i = 0; i < numberOfDots; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'white-circle'; // Utilisez la nouvelle classe .white-circle
+    dot.style.top = getRandom(-100, 20) + 'vh';
+    dot.style.left = getRandom(-200, 200) + 'vw';
+    document.querySelector('.container').appendChild(dot);
+  }
+}
+
+
+  createWhiteDots();
+
+  const trailElements = [];
+  let lastX, lastY;
+  let isMouseActive = false;
+
+  function createTrailElement(x, y) {
+    const trail = document.createElement('div');
+    trail.className = 'colorful-trail';
+    trail.style.left = x + 'px';
+    trail.style.top = y + 'px';
+    document.body.appendChild(trail);
+    trailElements.push(trail);
+
+    if (lastX !== undefined && lastY !== undefined) {
+      const line = document.createElement('div');
+      line.style.position = 'absolute';
+      line.style.background = 'linear-gradient(45deg, violet, pink, blue)';
+      line.style.width = '1px';
+      line.style.height = '1px';
+      line.style.left = (x + 2) + 'px';
+      line.style.top = (y + 2) + 'px';
+      line.style.transform = `rotate(${Math.atan2(y - lastY, x - lastX)}rad`;
+      document.body.appendChild(line);
+    }
+
+    lastX = x;
+    lastY = y;
+
+    if (trailElements.length > 50) {
+      const removedTrail = trailElements.shift();
+      document.body.removeChild(removedTrail);
+    }
+  }
+
+  function updateTrail(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    createTrailElement(x, y);
+    isMouseActive = true;
+
+    if (mouseInactivityTimeout) {
+      clearTimeout(mouseInactivityTimeout);
+    }
+
+    mouseInactivityTimeout = setTimeout(() => {
+      isMouseActive = false;
+      clearTrailElements();
+    }, 2000);
+  }
+
+  let mouseInactivityTimeout;
+
+  function clearTrailElements() {
+    for (const trail of trailElements) {
+      document.body.removeChild(trail);
+    }
+    trailElements.length = 0;
+  }
+
+  document.addEventListener('mousemove', updateTrail);
+
+  const welcomeText = document.querySelector('.welcome-text');
+  let textIndex = 0;
+  const textContent = "Welcome to OMAR HAI Portfolio";
+
+  function showTextLetterByLetter() {
+    if (textIndex < textContent.length) {
+      welcomeText.textContent += textContent[textIndex];
+      textIndex++;
+      setTimeout(showTextLetterByLetter, 100);
+    }
+  }
+
+  setTimeout(showTextLetterByLetter, 2000);
+
+  // Ajoutez cette ligne au début de votre script pour définir le délai de redirection
+  const redirectionDelay = 10000; // Délai en millisecondes (5 secondes)
+
+  // Le code suivant effectuera la redirection après le délai spécifié
+  setTimeout(() => {
+    window.location.href = 'index.html'; // Remplacez 'index.html' par l'URL de votre page de destination
+  }, redirectionDelay);
+
+</script>
+</body>
+</html>
