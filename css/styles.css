@@ -1,15 +1,33 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap  v5.2.3 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
+           /* Style pour le fond du modal */
+.modal-content {
+    background-color: #fde3d7; /* Couleur de fond */
+    border-radius: 10px;
+}
+
+/* Style pour le titre du modal */
+.modal-title {
+    color: #bd5d38; /* Couleur du titre */
+}
+
+/* Style pour le texte du modal */
+.modal-body {
+    color: black; /* Couleur du texte */
+}
+
+/* Style pour le bouton de fermeture */
+.close {
+    color: #bd5d38; /* Couleur du bouton de fermeture */
+}
+
+/* Style pour le bouton de fermeture au survol */
+.close:hover {
+    color: black; /* Couleur du bouton de fermeture au survol */
+}
+
+
+
 .list-inline-item {
   font-size: 0.5em; /* You can adjust the font size here */
 }
