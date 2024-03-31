@@ -650,10 +650,15 @@
             $(document).ready(function(){
                 $('#welcomeModal').modal('show'); // Affichez le modal au chargement de la page
         
-                // Masquez le modal après 5 secondes
+                // Masquez le modal après 5 secondes ou lorsqu'on clique sur la croix de fermeture
                 setTimeout(function(){
                     $('#welcomeModal').modal('hide');
                 }, 5000);
+        
+                // Gestionnaire d'événements pour le bouton de fermeture
+                $('.close').click(function(){
+                    $('#welcomeModal').modal('hide');
+                });
             });
         </script>
 
