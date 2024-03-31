@@ -12,11 +12,29 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
 
     </head>
     <body id="page-top">
+
+        <div id="welcomeModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="welcomeModalLabel">Bienvenue sur mon portfolio !</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Merci de visiter mon portfolio. N'hésitez pas à explorer mes projets et à me contacter si vous avez des questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -40,9 +58,7 @@
             </div>
         </nav>
 
-        <!-- Page Content-->
         <div class="container-fluid p-0">
-            <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
@@ -630,6 +646,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#welcomeModal').modal('show'); // Affichez le modal au chargement de la page
+        
+                // Masquez le modal après 5 secondes
+                setTimeout(function(){
+                    $('#welcomeModal').modal('hide');
+                }, 5000);
+            });
+        </script>
 
     </body>
 </html>
